@@ -4,17 +4,6 @@
 // 121 is palindrome while 123 is not.
 
 function isPalindrome(x){
-    if(num >= 0 && num <= 9){
-        console.log(true);
-        return true;
-    }
-    if(num < 0){
-        console.log(false);
-        return false;
-    }
-    if(num > 9){
-
-    }
 }
 
 isPalindrome(121);
