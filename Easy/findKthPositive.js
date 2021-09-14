@@ -42,3 +42,5 @@ var findKthPositive = function(arr, k) {
     findKthPositive([1,2,3,4], 2);
     findKthPositive([4,5,6,8], 2);
     findKthPositive([1,3], 1);
+
+    // todo
