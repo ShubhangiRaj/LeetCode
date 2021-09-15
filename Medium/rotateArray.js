@@ -21,11 +21,8 @@
 //     console.log(resultArr);
 //     return resultArr;
 // }
-var rotateArray = function(nums, k){
-    if(k === 0 || k >= nums.length){
-        console.log(nums);
-        return nums;
-    }
+var rotate = function(nums, k){
+    k %= nums.length;
     reverse(nums, 0, nums.length - 1);
     reverse(nums, 0, k-1);
     reverse(nums, k, nums.length - 1);
