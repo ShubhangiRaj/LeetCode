@@ -8,4 +8,4 @@ var sortArrayByParity = function(nums) {
 };
 
 sortArrayByParity([3,1,2,4,5]);
-// to do
+// todo
