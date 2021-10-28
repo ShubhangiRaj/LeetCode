@@ -73,6 +73,6 @@ function addBinary(a, b){
     }
 }
 
-addBinary("111", "111"); // "100"
+addBinary("110010", "110011"); // "100"
 
 // todo

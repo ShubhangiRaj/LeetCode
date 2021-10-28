@@ -1,24 +1,19 @@
 var twoSum = function(nums, target) {
     if(nums.length === 1 && target === nums[0]){
-        return 0;
+        return;
     }
     let hashMap = {};
     for(let i = 0; i < nums.length; i++){
-        hashMap[nums[i]] = target - nums[i];
-    }
-    console.log(hashMap);
-
-    for(let i in hashMap){
-        let indexOfFirstNum = nums.indexOf(parseInt(i));
-        let indexOfSecondNum = nums.lastIndexOf(hashMap[i]);
-        if(indexOfSecondNum > -1 && indexOfSecondNum !== indexOfFirstNum){
-            console.log([indexOfFirstNum, indexOfSecondNum]);
-            return;
+        let value = target - nums[i]
+        if(value in hashMap){
+            console.log([hashMap[value], i]);
+            return [hashMap[value], i];
         } else {
-            continue;
+            hashMap[nums[i]] = i;
         }
     }
-    return 0;
+    console.log(hashMap);
+    return;
 };
 
-twoSum([3,3], 6);
+twoSum([2,7,11,15], 9);

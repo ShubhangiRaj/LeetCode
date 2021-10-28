@@ -1,13 +1,17 @@
 var twoSum = function(numbers, target) {
-    for(let i = 0; i < numbers.length; i++){
-        let secondNum = target >= numbers[i] ? target - numbers[i] : numbers[i] - target;
-        if(numbers.lastIndexOf(secondNum) >= 0 && numbers.lastIndexOf(secondNum) !== i){
-            console.log([ i + 1, numbers.lastIndexOf(secondNum) +1 ]);
-            return [ i + 1, numbers.lastIndexOf(secondNum) +1 ];
-        } else {
-            continue;
+    //    because it is a sorted array, we can use two pointers instead of hashmap
+        let p1 = 0;
+        let p2 = numbers.length - 1;
+        while(p1 < p2){
+            if(numbers[p1] + numbers[p2] === target){
+                return [p1+1, p2+1];
+            } else if(numbers[p1] + numbers[p2] > target){
+                p2--;
+            } else if(numbers[p1] + numbers[p2] < target){
+                p1++;
+            }
         }
-    }
+        return;
 };
 twoSum([2,7,11,15], 9);
 twoSum([0, 0, 1, 2], 0);
